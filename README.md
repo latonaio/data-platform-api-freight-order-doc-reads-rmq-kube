@@ -1,6 +1,6 @@
 # data-platform-api-freight-order-doc-reads-rmq-kube
 
-data-platform-api-freight-order-doc-reads-rmq-kube は、周辺業務システム　を データ連携基盤 と統合することを目的に、API で輸送依頼文書データを取得するマイクロサービスです。  
+data-platform-api-freight-order-doc-reads-rmq-kube は、周辺業務システム　を データ連携基盤 と統合することを目的に、API で輸送指図文書データを取得するマイクロサービスです。  
 https://xxx.xxx.io/api/API_FREIGHT_ORDER_DOC_SRV/reads/
 
 ## 動作環境
@@ -18,7 +18,7 @@ APIサービス URL: https://xxx.xxx.io/api/API_FREIGHT_ORDER_DOC_SRV/reads/
 ## 本レポジトリ に 含まれる API名
 data-platform-api-freight-order-doc-reads-rmq-kube には、次の API をコールするためのリソースが含まれています。  
 
-* A_HeaderDoc（輸送依頼 - ヘッダ文書データ）
+* A_HeaderDoc（輸送指図 - ヘッダ文書データ）
 
 ## API への 値入力条件 の 初期値
 data-platform-api-freight-order-doc-reads-rmq-kube において、API への値入力条件の初期値は、入力ファイルレイアウトの種別毎に、次の通りとなっています。  
@@ -85,7 +85,7 @@ func checkResult(msg rabbitmq.RabbitmqMessage) bool {
 
 ## Output  
 本マイクロサービスでは、[golang-logging-library-for-data-platform](https://github.com/latonaio/golang-logging-library-for-data-platform) により、以下のようなデータがJSON形式で出力されます。  
-以下の sample.json の例は 輸送依頼 の ヘッダ文書データ が取得された結果の JSON の例です。  
+以下の sample.json の例は 輸送指図 の ヘッダ文書データ が取得された結果の JSON の例です。  
 以下の項目のうち、"FreightOrder" ～ "IsMarkedForDeletion" は、/DPFM_API_Output_Formatter/type.go 内 の Type HeaderDoc {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
