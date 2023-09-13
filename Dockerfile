@@ -8,16 +8,16 @@ WORKDIR /go/src/github.com/latonaio
 
 COPY . .
 RUN go mod download
-RUN go build -o data-platform-api-freight-agreement-doc-reads-rmq-kube ./
+RUN go build -o data-platform-api-freight-order-doc-reads-rmq-kube ./
 
 # Runtime Container
 FROM alpine:3.14
 RUN apk add --no-cache libc6-compat
-ENV SERVICE=data-platform-api-freight-agreement-doc-reads-rmq-kube \
+ENV SERVICE=data-platform-api-freight-order-doc-reads-rmq-kube \
     APP_DIR="${AION_HOME}/${POSITION}/${SERVICE}"
 
 WORKDIR ${AION_HOME}
 
-COPY --from=builder /go/src/github.com/latonaio/data-platform-api-freight-agreement-doc-reads-rmq-kube .
+COPY --from=builder /go/src/github.com/latonaio/data-platform-api-freight-order-doc-reads-rmq-kube .
 
-CMD ["./data-platform-api-freight-agreement-doc-reads-rmq-kube"]
+CMD ["./data-platform-api-freight-order-doc-reads-rmq-kube"]

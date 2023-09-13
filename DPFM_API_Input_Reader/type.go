@@ -10,14 +10,14 @@ type SDC struct {
 	BusinessPartnerID *int      `json:"business_partner"`
 	ServiceLabel      string    `json:"service_label"`
 	APIType           string    `json:"api_type"`
-	HeaderDoc         HeaderDoc `json:"FreightAgreement"`
+	HeaderDoc         HeaderDoc `json:"FreightOrder"`
 	APISchema         string    `json:"api_schema"`
 	Accepter          []string  `json:"accepter"`
 	Deleted           bool      `json:"deleted"`
 }
 
 type HeaderDoc struct {
-	FreightAgreement         *int    `json:"FreightAgreement"`
+	FreightOrder             *int    `json:"FreightOrder"`
 	DocType                  *string `json:"DocType"`
 	DocVersionID             *int    `json:"DocVersionID"`
 	DocID                    *string `json:"DocID"`
@@ -25,18 +25,4 @@ type HeaderDoc struct {
 	FileName                 *string `json:"FileName"`
 	FilePath                 *string `json:"FilePath"`
 	DocIssuerBusinessPartner *int    `json:"DocIssuerBusinessPartner"`
-	ItemDoc                  ItemDoc `json:"ItemDoc"`
-}
-
-type ItemDoc struct {
-	FreightAgreement         *int    `json:"FreightAgreement"`
-	FreightAgreementItem     *int    `json:"FreightAgreementItem"`
-	DocType                  *string `json:"DocType"`
-	DocVersionID             *int    `json:"DocVersionID"`
-	DocID                    *string `json:"DocID"`
-	FileExtension            *string `json:"FileExtension"`
-	FileName                 *string `json:"FileName"`
-	FilePath                 *string `json:"FilePath"`
-	DocIssuerBusinessPartner *int    `json:"DocIssuerBusinessPartner"`
-	ItemDoc                  ItemDoc `json:"ItemDoc"`
 }

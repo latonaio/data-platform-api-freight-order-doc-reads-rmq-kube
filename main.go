@@ -1,10 +1,10 @@
 package main
 
 import (
-	dpfm_api_caller "data-platform-api-freight-agreement-doc-reads-rmq-kube/DPFM_API_Caller"
-	dpfm_api_input_reader "data-platform-api-freight-agreement-doc-reads-rmq-kube/DPFM_API_Input_Reader"
-	dpfm_api_output_formatter "data-platform-api-freight-agreement-doc-reads-rmq-kube/DPFM_API_Output_Formatter"
-	"data-platform-api-freight-agreement-doc-reads-rmq-kube/config"
+	dpfm_api_caller "data-platform-api-freight-order-doc-reads-rmq-kube/DPFM_API_Caller"
+	dpfm_api_input_reader "data-platform-api-freight-order-doc-reads-rmq-kube/DPFM_API_Input_Reader"
+	dpfm_api_output_formatter "data-platform-api-freight-order-doc-reads-rmq-kube/DPFM_API_Output_Formatter"
+	"data-platform-api-freight-order-doc-reads-rmq-kube/config"
 	"encoding/json"
 	"fmt"
 	"time"
@@ -115,7 +115,6 @@ func getAccepter(input *dpfm_api_input_reader.SDC) []string {
 	if accepter[0] == "All" {
 		accepter = []string{
 			"HeaderDoc",
-			"ItemDoc",
 		}
 	}
 	return accepter

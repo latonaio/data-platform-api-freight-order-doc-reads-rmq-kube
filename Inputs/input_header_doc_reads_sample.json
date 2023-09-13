@@ -6,19 +6,13 @@
   "api_status_code": 200,
   "runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
   "business_partner": 201,
-  "service_label": "FREIGHT_AGREEMENT_DOC",
+  "service_label": "FREIGHT_ORDER_DOC",
   "api_type": "reads",
-  "FreightAgreement": {
-    "FreightAgreement": 1,
+  "FreightOrder": {
+    "FreightOrder": 1,
     "DocType": "QRCODE",
     "DocIssuerBusinessPartner": 201,
-    "ItemDoc": {
-      "FreightAgreementItem": null,
-      "DocType": "",
-      "DocIssuerBusinessPartner": null
-    }
-  },
-  "api_schema": "DPFMFreightAgreementDocReads",
+  "api_schema": "DPFMFreightOrderDocReads",
   "accepter": [
     "HeaderDoc"
   ]

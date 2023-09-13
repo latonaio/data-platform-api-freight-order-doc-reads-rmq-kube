@@ -1,7 +1,7 @@
 package requests
 
 type HeaderDoc struct {
-	FreightAgreement         int    `json:"FreightAgreement"`
+	FreightOrder             int    `json:"FreightOrder"`
 	DocType                  string `json:"DocType"`
 	DocVersionID             int    `json:"DocVersionID"`
 	DocID                    string `json:"DocID"`
